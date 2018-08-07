@@ -29,6 +29,7 @@ import (
 	"html/template"
 	"net/http"
 	"time"
+	"os"
 )
 
 type user struct {
@@ -57,13 +58,15 @@ func init() {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+
 	http.HandleFunc("/", index)
 	http.HandleFunc("/bar", bar)
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/logout", logout)
 	http.Handle("/favicon.ico", http.NotFoundHandler())
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":" + port, nil)
 }
 
 func index(w http.ResponseWriter, req *http.Request) {
