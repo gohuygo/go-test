@@ -1,0 +1,20 @@
+{
+	"ImportPath": "08_expire-session",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/satori/go.uuid",
+			"Comment": "v1.2.0-4-g36e9d2e",
+			"Rev": "36e9d2ebbde5e3f13ab2e25625fd453271d6522e"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/bcrypt",
+			"Rev": "56440b844dfe139a8ac053f4ecac0b20b79058f4"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/blowfish",
+			"Rev": "56440b844dfe139a8ac053f4ecac0b20b79058f4"
+		}
+	]
+}
